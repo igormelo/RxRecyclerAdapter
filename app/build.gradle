@@ -35,5 +35,6 @@ dependencies {
     compile 'com.android.support:appcompat-v7:24.0.0'
     compile 'com.minimize.android:rxrecycler-adapter:1.2.2'
     testCompile 'junit:junit:4.12'
+    compile 'com.jakewharton.rxbinding:rxbinding:1.0.0'
 
 }
