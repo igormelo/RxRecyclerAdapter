@@ -36,8 +36,13 @@ public class MainActivity extends AppCompatActivity {
         int i;
         for(i=0; i<10;i++){
             dataSet = new ArrayList<>(i);
-            dataSet.add("oi: " +i);
+            dataSet.add("oi: ");
+            dataSet.add("como: ");
+            dataSet.add("vai: ");
+            dataSet.add("voce? ");
+
         }
+
 
 
         binding.recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -46,7 +51,6 @@ public class MainActivity extends AppCompatActivity {
                 .repeat(10)
                 .<ItemLayoutBinding>bindRecyclerView(binding.recyclerView,R.layout.item_layout).subscribe(viewHolder ->{
             ItemLayoutBinding b = viewHolder.getViewDataBinding();
-            //String item = viewHolder.getItem();
             b.textViewItem.setText(viewHolder.getItem());
         });
         dataSet = rxDataSource.getRxAdapter().getDataSet();
